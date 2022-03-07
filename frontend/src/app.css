@@ -1,6 +1,5 @@
 .card {
   width: 250px;
-  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -32,11 +31,18 @@ label {
 
 form {
   width: 250px;
-  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: rgb(88, 87, 87);
+}
+
+.image {
+  height: 150px;
+}
+
+.formbox {
+  margin-bottom: 10px;
 }
 
 input {
@@ -86,19 +92,24 @@ textarea {
   cursor: pointer;
 }
 
-.button:focus{
+.button:focus {
   outline: none;
 }
 
-.logout{
+.logout {
   background-color: tomato;
 }
 
-.login{
+.login {
   background-color: teal;
   margin-right: 10px;
 }
 
-.register{
+.register {
   background-color: slateblue;
+}
+
+.input {
+  display: block;
+  margin-bottom: 20px;
 }

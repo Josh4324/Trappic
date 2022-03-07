@@ -22,6 +22,7 @@ export default function Register({ setShowRegister }) {
       await axios.post("/users/register", newUser);
       setError(false);
       setSuccess(true);
+      setShowRegister(false);
     } catch (err) {
       setError(true);
     }
@@ -30,15 +31,16 @@ export default function Register({ setShowRegister }) {
     <div className="registerContainer">
       <div className="logo">
         <Room className="logoIcon" />
-        <span>LamaPin</span>
+        <span>Trappic</span>
       </div>
-      <form onSubmit={handleSubmit}>
-        <input autoFocus placeholder="username" ref={usernameRef} />
-        <input type="email" placeholder="email" ref={emailRef} />
+      <form style={{marginTop:"30px"}} onSubmit={handleSubmit}>
+        <input autoFocus placeholder="Username" className="input" ref={usernameRef} />
+        <input type="email" className="input" placeholder="Email" ref={emailRef} />
         <input
           type="password"
+          className="input"
           min="6"
-          placeholder="password"
+          placeholder="Password"
           ref={passwordRef}
         />
         <button className="registerBtn" type="submit">

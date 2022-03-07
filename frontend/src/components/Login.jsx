@@ -28,14 +28,15 @@ export default function Login({ setShowLogin, setCurrentUsername,myStorage }) {
     <div className="loginContainer">
       <div className="logo">
         <Room className="logoIcon" />
-        <span>LamaPin</span>
+        <span>Trappic</span>
       </div>
-      <form onSubmit={handleSubmit}>
-        <input autoFocus placeholder="username" ref={usernameRef} />
+      <form style={{marginTop:"30px"}} onSubmit={handleSubmit}>
+        <input autoFocus className="input" placeholder="Username" ref={usernameRef} />
         <input
           type="password"
+          className="input"
           min="6"
-          placeholder="password"
+          placeholder="Password"
           ref={passwordRef}
         />
         <button className="loginBtn" type="submit">
